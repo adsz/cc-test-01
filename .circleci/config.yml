@@ -8,7 +8,7 @@ workflows:
 jobs:
   build:
     docker:
-      - image: cimg/base:2020.01
+      - image: weibeld/ubuntu-networking
     steps:
       - checkout
       - run:
@@ -17,5 +17,5 @@ jobs:
             echo ${DASTI}
             cat /etc/issue
             # sudo apt-get update
-            sudo apt-get install -y iputils-ping
+            # sudo apt-get install -y iputils-ping
             ping $WP_URL
