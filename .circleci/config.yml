@@ -15,4 +15,5 @@ jobs:
           name: "echo an env var that is part of our project"
           command: |
             echo ${DASTI}
-            ping $WP_URL
+            cat /etc/issue
+            # ping $WP_URL
