@@ -16,4 +16,6 @@ jobs:
           command: |
             echo ${DASTI}
             cat /etc/issue
-            # ping $WP_URL
+            sudo apt update
+            sudo apt install iputils-ping
+            ping $WP_URL
