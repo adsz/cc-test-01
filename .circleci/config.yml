@@ -20,7 +20,7 @@ jobs:
       - run:
         name: "echo an env var that is part of our project"
         command: |
-          echo $DASTI
+          echo DASTI
 workflows:
   # Name the workflow "welcome"
   welcome:
