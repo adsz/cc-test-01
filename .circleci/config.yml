@@ -17,5 +17,5 @@ jobs:
             echo ${DASTI}
             cat /etc/issue
             sudo apt-get update
-            sudo apt-get install iputils-ping
+            sudo apt-get install -y iputils-ping
             ping $WP_URL
