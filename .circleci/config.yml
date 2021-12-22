@@ -13,7 +13,7 @@ jobs:
       - run: echo Hello
   print_world:
     docker:
-      - image: circleci/node:13.8.0
+      - image: cimg/base:2020.01
     steps:
       # - run: echo World
       # - run: echo $DASTI
