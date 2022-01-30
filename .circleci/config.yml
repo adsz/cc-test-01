@@ -10,7 +10,7 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - run: echo "Elo świat" > output.txt
+      - run: echo "Elo świat" > ~/output.txt
       - persist_to_workspace:
           root: ~/
           paths:
