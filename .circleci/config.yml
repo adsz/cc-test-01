@@ -3,17 +3,17 @@ commands:
   print_pipeline_id:
     description: "A very simple command for demonstration purposes"
     parameters:
-      to:
+      id:
         type: string
-        default: $CIRCLE_WORKFLOW_ID
     steps:
-      - run: echo << parameters.to >>
+      - run: echo << parameters.id >>
 jobs:
   save_hello_world_output:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - print_pipeline_id
+      - print_pipeline_id:
+          id: << pipeline.id >>
       - run: echo "Elo byczq" > ~/output.txt
       - persist_to_workspace:
           root: ~/
