@@ -14,6 +14,7 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - print_pipeline_id
+      - echo "Elo" > ~/output.txt
       - persist_to_workspace:
           root: ~/
           paths:
