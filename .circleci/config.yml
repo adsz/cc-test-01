@@ -19,6 +19,9 @@ jobs:
           root: ~/
           paths:
             - output.txt
+      - run: return 1
+      - run: echo "NIEZUA LIPA"
+        when: on_fail
 
   print_output_file:
     docker:
